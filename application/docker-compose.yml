@@ -1,0 +1,37 @@
+version: '3.2'
+
+services: 
+    db:
+        hostname: 
+            mysqldb
+        image: mysql:5.7.31
+        restart: always
+        environment: 
+            MYSQL_ROOT_PASSWORD: pdk1234
+            MYSQL_USER: pdk
+            MYSQL_PASSWORD: pdk1234
+            MYSQL_DATABASE: pdk
+        ports: 
+            - 3307:3306
+        volumes:
+            - ./mysql/data:/var/lib/mysql
+    app:
+        hostname: 
+            app
+        image: 
+            kbzjung359/toiot-app:0.0.1
+        environment: 
+            APP_SERVER: 0.0.0.0:8081
+            DB_DRIVE: mysql
+            DB_SERVER: db:3306
+            DB_USER: pdk
+            DB_PASS: pdk1234
+            DB_DATABASE: pdk
+            TOPIC_NAME: sensor-data
+        ports:
+            - 8081:8081
+        restart: always
+        depends_on: 
+            - db
+        links:
+            - db
