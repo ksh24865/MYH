@@ -1,6 +1,6 @@
 package adapter
 
-import "github.com/KumKeeHyun/toiot/application/domain/model"
+import "github.com/ksh24865/smart-park/application/domain/model"
 
 type Node struct {
 	ID       int            `json:"id"`

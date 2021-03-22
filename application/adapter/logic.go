@@ -3,7 +3,7 @@ package adapter
 import (
 	"encoding/json"
 
-	"github.com/KumKeeHyun/toiot/application/domain/model"
+	"github.com/ksh24865/smart-park/application/domain/model"
 )
 
 type Logic struct {

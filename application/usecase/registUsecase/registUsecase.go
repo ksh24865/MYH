@@ -1,6 +1,6 @@
 package registUsecase
 
-import "github.com/KumKeeHyun/toiot/application/domain/repository"
+import "github.com/ksh24865/smart-park/application/domain/repository"
 
 type registUsecase struct {
 	sir repository.SinkRepo

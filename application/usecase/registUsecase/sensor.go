@@ -1,8 +1,8 @@
 package registUsecase
 
 import (
-	"github.com/KumKeeHyun/toiot/application/adapter"
-	"github.com/KumKeeHyun/toiot/application/domain/model"
+	"github.com/ksh24865/smart-park/application/adapter"
+	"github.com/ksh24865/smart-park/application/domain/model"
 	"log"
 )
 

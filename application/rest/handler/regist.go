@@ -5,8 +5,8 @@ import (
 	"net/http"
 	"strconv"
 
-	"github.com/KumKeeHyun/toiot/application/adapter"
-	"github.com/KumKeeHyun/toiot/application/domain/model"
+	"github.com/ksh24865/smart-park/application/adapter"
+	"github.com/ksh24865/smart-parkapplication/domain/model"
 	"github.com/gin-gonic/gin"
 )
 

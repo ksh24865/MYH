@@ -1,7 +1,7 @@
 package handler
 
 import (
-	"github.com/KumKeeHyun/toiot/application/usecase"
+	"github.com/ksh24865/smart-park/application/usecase"
 )
 
 type Handler struct {

@@ -4,8 +4,8 @@ import (
 	"log"
 	"sync"
 
-	"github.com/KumKeeHyun/toiot/application/adapter"
-	"github.com/KumKeeHyun/toiot/application/domain/model"
+	"github.com/ksh24865/smart-park/application/adapter"
+	"github.com/ksh24865/smart-park/application/domain/model"
 )
 
 func waitRespGroup(e EVENT, body interface{}, ll []model.LogicService) (prl []pingRequest) {

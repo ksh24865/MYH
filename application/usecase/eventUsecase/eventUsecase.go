@@ -5,8 +5,8 @@ import (
 	"sync"
 	"time"
 
-	"github.com/KumKeeHyun/toiot/application/domain/model"
-	"github.com/KumKeeHyun/toiot/application/domain/repository"
+	"github.com/ksh24865/smart-park/application/domain/model"
+	"github.com/ksh24865/smart-park/application/domain/repository"
 	"github.com/go-resty/resty/v2"
 )
 

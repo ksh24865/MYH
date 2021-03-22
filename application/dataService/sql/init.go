@@ -4,8 +4,8 @@ import (
 	"errors"
 	"fmt"
 
-	"github.com/KumKeeHyun/toiot/application/domain/model"
-	"github.com/KumKeeHyun/toiot/application/setting"
+	"github.com/ksh24865/smart-park/application/domain/model"
+	"github.com/ksh24865/smart-park/application/setting"
 	"gorm.io/driver/mysql"
 	"gorm.io/gorm"
 )

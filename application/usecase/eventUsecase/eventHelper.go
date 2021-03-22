@@ -4,7 +4,7 @@ import (
 	"fmt"
 	"time"
 
-	"github.com/KumKeeHyun/toiot/application/domain/model"
+	"github.com/ksh24865/smart-park/application/domain/model"
 	"github.com/go-resty/resty/v2"
 )
 
