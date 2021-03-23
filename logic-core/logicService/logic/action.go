@@ -91,9 +91,7 @@ func (ae *ActuatorElement) Exec(d *model.LogicData) {
 		buff := bytes.NewBuffer(pbytes)
 		addr := (*adapter.AddrMap)[d.Node.Sid]
 		log.Println("in Act.Exec, 받는 주소: " + "http://" + addr.Addr + "/actuator" + "전달내용: " + string(pbytes))
-		log.Println("in CreateAndStartLogic, run go routin")
-		log.Println("in CreateAndStartLogic, run go routin")
-		log.Println("in CreateAndStartLogic, run go routin")
+		
 		resp, err := http.Post("http://"+addr.Addr+"/actuator", "application/json", buff)
 		if err != nil {
 			panic(err)

@@ -5,8 +5,8 @@ import (
 	"fmt"
 	"log"
 
-	"github.com/KumKeeHyun/toiot/logic-core/domain/model"
-	"github.com/KumKeeHyun/toiot/logic-core/logicService/logic"
+	"github.com/ksh24865/smartpark/logic-core/domain/model"
+	"github.com/ksh24865/smartpark/logic-core/logicService/logic"
 )
 
 type logicService struct {
