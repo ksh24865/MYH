@@ -1,4 +1,4 @@
-module github.com/KumKeeHyun/toiot/application
+module github.com/ksh24865/smart-park/application
 
 go 1.13
 
