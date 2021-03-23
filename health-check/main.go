@@ -7,10 +7,10 @@ import (
 	"os/signal"
 	"syscall"
 
-	"github.com/KumKeeHyun/toiot/health-check/dataService/memory"
-	"github.com/KumKeeHyun/toiot/health-check/setting"
-	"github.com/KumKeeHyun/toiot/health-check/usecase/healthCheckUC"
-	"github.com/KumKeeHyun/toiot/health-check/usecase/websocketUC"
+	"github.com/ksh24865/smartpark/health-check/dataService/memory"
+	"github.com/ksh24865/smartpark/health-check/setting"
+	"github.com/ksh24865/smartpark/health-check/usecase/healthCheckUC"
+	"github.com/ksh24865/smartpark/health-check/usecase/websocketUC"
 	"github.com/gin-gonic/gin"
 	"github.com/gorilla/websocket"
 )

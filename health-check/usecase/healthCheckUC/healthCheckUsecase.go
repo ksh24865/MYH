@@ -6,9 +6,9 @@ import (
 	"net"
 	"time"
 
-	"github.com/KumKeeHyun/toiot/health-check/adapter"
-	"github.com/KumKeeHyun/toiot/health-check/domain/repository"
-	"github.com/KumKeeHyun/toiot/health-check/setting"
+	"github.com/ksh24865/smartpark/health-check/adapter"
+	"github.com/ksh24865/smartpark/health-check/domain/repository"
+	"github.com/ksh24865/smartpark/health-check/setting"
 )
 
 type healthCheckUsecase struct {

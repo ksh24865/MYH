@@ -1,4 +1,4 @@
-module github.com/KumKeeHyun/toiot/health-check
+module github.com/ksh24865/smartpark/health-check
 
 go 1.13
 

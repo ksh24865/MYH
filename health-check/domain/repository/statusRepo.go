@@ -1,8 +1,8 @@
 package repository
 
 import (
-	"github.com/KumKeeHyun/toiot/health-check/adapter"
-	"github.com/KumKeeHyun/toiot/health-check/domain/model"
+	"github.com/ksh24865/smartpark/health-check/adapter"
+	"github.com/ksh24865/smartpark/health-check/domain/model"
 )
 
 type StatusRepo interface {
