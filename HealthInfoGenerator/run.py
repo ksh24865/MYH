@@ -26,12 +26,3 @@ for i in range(1,12):
     sock.send(make_msg(i).encode())    
     time.sleep(0.2)
 
-{
-    "sensor_id": 12,
-    "node_id":34,
-    "values" : [
-        56.78,
-        9.0
-    ],
-    "timestamp": "2021-03-25 18:29:42"
-}
