@@ -19,10 +19,12 @@ def make_msg(sid):
             msg+=']}'
     return msg
 
-
-for i in range(1,12):
-    sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM) 
-    sock.connect(('10.5.110.11', 8085)) 
-    sock.send(make_msg(i).encode())    
-    time.sleep(0.2)
+while 1 :
+        
+    for i in range(1,12):
+        sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM) 
+        sock.connect(('10.5.110.11', 8085)) 
+        sock.send(make_msg(i).encode())    
+        time.sleep(0.2)
+    time.sleep(10)
 

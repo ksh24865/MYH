@@ -12,7 +12,6 @@ import (
 
 	"github.com/ksh24865/smart-park/logic-core/domain/model"
 	"github.com/ksh24865/smart-park/logic-core/usecase"
-
 	"github.com/ksh24865/smart-park/logic-core/adapter"
 	"github.com/ksh24865/smart-park/logic-core/dataService/memory"
 	"github.com/ksh24865/smart-park/logic-core/elasticClient"
@@ -48,9 +47,10 @@ func main() {
 	// test code ------------------------------------------
 	adapter.AddrMap = &AddrMap
 	var tmpSink model.Sink
-	tmpSink.Addr = "10.5.110.41:5000"
-	AddrMap[6] = tmpSink
-	AddrMap[7] = tmpSink
+	tmpSink.Addr = "10.27.18.36:5000"
+	AddrMap[12] = tmpSink
+	
+	// AddrMap[7] = tmpSink
 	// ----------------------------------------------------
 	ks := sarama.NewKafkaConsumer()
 	es := elasticClient.NewElasticClient()

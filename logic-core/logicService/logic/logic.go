@@ -27,7 +27,7 @@ func (e *BaseElement) Exec(d *model.LogicData) {
 		log.Println("!!!!in BaseElement.Exec !!!!")
 		e.next.Exec(d)
 	} else {
-		log.Println("!!!!NOT!!!!in BaseElement.Exec !!!!")
+		log.Println("!!!!NOT!.!!!in BaseElement.Exec !!!!")
 	}
 }
 

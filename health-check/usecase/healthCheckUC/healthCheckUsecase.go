@@ -67,7 +67,7 @@ func (hu *healthCheckUsecase) healthCheck(conn net.Conn) {
 	if n > 0 {
 		var healthInfo adapter.HealthInfo
 		var states adapter.States
-
+		// log.Println("처음 온 데이터 :", recvBuf)
 		recvBuf = ClearPadding(recvBuf)
 		// log.Println("recv Buf2 :", recvBuf)
 		json.Unmarshal(recvBuf, &healthInfo)
@@ -79,7 +79,7 @@ func (hu *healthCheckUsecase) healthCheck(conn net.Conn) {
 		tmphealth := hu.sr.UpdateTable(states) // 변화가 생긴 것들만 뭘로 변했는지 알려줌 ex : {1 [{1 1} {2 1} {8 0}]}
 		log.Println(tmphealth)
 
-		// hu.event <- tmphealth
+		hu.event <- tmphealth
 		// //test_end
 
 		// //hu.event <- hu.sr.UpdateTable(sinknum, res)
