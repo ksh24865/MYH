@@ -1,0 +1,13 @@
+version: '3.2'
+
+services:
+    health:
+        hostname: health
+        image: ksh24865/smartpark-health:0.0.1
+        restart: always
+        ports: 
+            - 8083:8083
+        environment: 
+            HEALTH_SERVER: 0.0.0.0:8083
+            HEALTH__LISTEN: 0.0.0.0:8082
+            APP_SERVER: 0.0.0.0:8081

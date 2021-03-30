@@ -1,7 +1,6 @@
 package memory
 
 import (
-	"log"
 	"sync"
 	"time"
 

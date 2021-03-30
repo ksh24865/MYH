@@ -10,7 +10,7 @@ import (
 	"syscall"
 	"time"
 
-	"github.com/ksh24865/smart-park/logic-core/domain/model"
+	
 	"github.com/ksh24865/smart-park/logic-core/usecase"
 	"github.com/ksh24865/smart-park/logic-core/adapter"
 	"github.com/ksh24865/smart-park/logic-core/dataService/memory"
@@ -54,6 +54,8 @@ func main() {
 
 	h := handler.NewHandler(evuc, lcuc)
 	r := gin.Default()
+	adapter.AddrMap = &AddrMap
+	
 	SetEventRoute(r, h)
 	RegistLogicService(evuc)
 
