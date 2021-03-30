@@ -1,0 +1,6 @@
+getmac
+spidev
+RPI.GPIO
+pyLoRa
+pycryptodome
+pycrypto
