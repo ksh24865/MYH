@@ -44,14 +44,7 @@ func main() {
 	}()
 
 	rr, AddrMap := memory.NewRegistRepo()
-	// test code ------------------------------------------
-	adapter.AddrMap = &AddrMap
-	var tmpSink model.Sink
-	tmpSink.Addr = "10.27.18.36:5000"
-	AddrMap[12] = tmpSink
-	
-	// AddrMap[7] = tmpSink
-	// ----------------------------------------------------
+
 	ks := sarama.NewKafkaConsumer()
 	es := elasticClient.NewElasticClient()
 	ls := logicService.NewLogicService()

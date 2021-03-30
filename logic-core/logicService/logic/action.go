@@ -74,9 +74,6 @@ type Actuator struct {
 
 
 func (ae *ActuatorElement) Exec(d *model.LogicData) {
-	/*
-		Sinkaddr  돌면서 post요청
-	*/
 	ok, exist := ae.Interval[d.Node.Name]
 	if !exist {
 		ae.Interval[d.Node.Name] = true
@@ -92,13 +89,9 @@ func (ae *ActuatorElement) Exec(d *model.LogicData) {
 			}
 					
 			pbytes, _ := json.Marshal(res)
-			if res.Aid == 1 {
-				pbytes = []byte(string(pbytes)[:50] + `,{"value":2,"sleep":3}]}`)
-			}
-
 			buff := bytes.NewBuffer(pbytes)
 			addr := (*adapter.AddrMap)[d.Node.Sid]		
-			log.Println("in Act.Exec, 받는 주소: " + "http://" + addr.Addr + "/actuator" + "전달내용: " + string(pbytes))
+			// log.Println("in Act.Exec, 받는 주소: " + "http://" + addr.Addr + "/actuator" + "전달내용: " + string(pbytes))
 			resp, err := http.Post("http://"+addr.Addr+"/actuator", "application/json", buff)
 			if err != nil {
 				panic(err)
@@ -113,11 +106,5 @@ func (ae *ActuatorElement) Exec(d *model.LogicData) {
 		}()
 	}
 	ae.BaseElement.Exec(d)
-	// // Response 체크.
-	// respBody, err := ioutil.ReadAll(resp.Body)
-	// if err == nil {
-	// 	str := string(respBody)
-	// 	println(str)
-	// }
-
 }
+

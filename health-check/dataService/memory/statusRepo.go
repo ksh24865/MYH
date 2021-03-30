@@ -90,15 +90,6 @@ func (sr *statusRepo) updateNodeStatus(sinkID int, ns []adapter.NodeState, t tim
 				sr.table[sinkID][k] = v
 				res = append(res, model.NodeStatus{NodeID: k, State: v.State}) // , Battery: v.Battery
 			}
-
-		}
-	}
-
-	// rres = model.SinkStatus{SinkID: sinkID, Satates: res}
-	// log.Println("==============================================================================>\n",sr.table,"\n<===============================================")
-	for _, tempTable := range sr.table{
-		for k, v := range tempTable{
-			res = append(res, model.NodeStatus{NodeID: k, State: v.State}) //, Battery: v.Battery})
 		}
 	}
 	return res

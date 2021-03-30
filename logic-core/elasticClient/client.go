@@ -164,10 +164,8 @@ func (ec *client) GetInput() chan<- model.Document {
 func (ec *client) insertDoc(d *model.Document) {
 	ec.docBuf = append(ec.docBuf, d)
 	if len(ec.docBuf) >= (ec.bufSize - 10) {
-
 		ec.bulk()
 	}
-	
 }
 
 

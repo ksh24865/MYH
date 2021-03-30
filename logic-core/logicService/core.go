@@ -27,7 +27,7 @@ func NewLogicService() *logicService {
 
 func (m *mux) CreateAndStartLogic(l *model.Logic) error {
 	listen := make(chan model.LogicData, 100)
-	log.Println("in CreateAndStartLogic, l=", l)
+	
 	lchs, ok := m.chTable[l.SensorID]
 	if !ok {
 		m.chTable[l.SensorID] = make(map[int]chan model.LogicData)
@@ -40,7 +40,7 @@ func (m *mux) CreateAndStartLogic(l *model.Logic) error {
 	lchs[l.ID] = listen
 
 	elems, err := logic.BuildLogic(l)
-	log.Println("end BuildLogic")
+	
 	if err != nil {
 		log.Println("end BuildLogic, return error")
 		return err
