@@ -6,7 +6,7 @@ services:
     build:
       context: ./toiot-ui # ui DIR 하위에 있는 Dockerfile을 사용
       dockerfile: Dockerfile
-    image: iamhge/toiot-ui:0.0.1
+    image: ksh24865/smartpark-app:0.1
     volumes: # if you only download docker image, you should remove volumes field
       - './ui:/app' # 소스 디렉토리 공유
       - '/app/node_modules'
